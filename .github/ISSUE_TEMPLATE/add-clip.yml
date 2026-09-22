@@ -1,0 +1,28 @@
+name: 🎬 클립 추가
+description: 내가 추천할 유튜브 영상을 등록합니다.
+title: "[클립] 영상 제목"
+labels: ["클립추가"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: 영상 제목
+      placeholder: Never Gonna Give You Up
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 링크
+      placeholder: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 추천 이유
+      placeholder: 링크를 잘못 눌렀을 때 만나게 되는, 인터넷에서 가장 유명한 3분 33초
+    validations:
+      required: true
