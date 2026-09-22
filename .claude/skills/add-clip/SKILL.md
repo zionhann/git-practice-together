@@ -43,18 +43,18 @@ gh issue list                       # 이미 등록된 이슈인지 먼저 확�
 해당 이슈가 없으면 `🎬 클립 추가` 템플릿 형식으로 만듭니다.
 
 ```bash
-gh issue create --title "[클립] Oasis (오아시스)" --body "$(cat <<'EOF'
+gh issue create --title "[클립] Never Gonna Give You Up" --body "$(cat <<'EOF'
 ### 영상 제목
 
-Oasis (오아시스)
+Never Gonna Give You Up
 
 ### 링크
 
-https://youtu.be/iwwb-HDfF9I
+https://youtu.be/dQw4w9WgXcQ
 
 ### 추천 이유
 
-한 번 들으면 후렴이 계속 맴돕니다
+링크를 잘못 눌렀을 때 만나게 되는, 인터넷에서 가장 유명한 3분 33초
 EOF
 )"
 ```
@@ -67,7 +67,7 @@ EOF
 ```bash
 git switch main
 git pull --ff-only
-git switch -c 'feat/#9'      # 따옴표 필수
+git switch -c 'feat/#12'     # 따옴표 필수
 ```
 
 `#` 는 셸에서 주석 시작이라, 따옴표를 빼면 브랜치 이름이 `feat/` 로 잘립니다.
@@ -90,7 +90,7 @@ git switch -c 'feat/#9'      # 따옴표 필수
 | --- | --- |
 | `href` 의 영상 ID | `https://www.youtube.com/watch?v=<영상ID>` |
 | `img src` 의 영상 ID | `https://img.youtube.com/vi/<영상ID>/hqdefault.jpg` |
-| `img alt` | `한요한 - Oasis (오아시스) 썸네일` |
+| `img alt` | `Rick Astley - Never Gonna Give You Up 썸네일` |
 | `card-title` | 영상 제목 |
 | `card-channel` | 채널명 (재생 시간을 알면 `채널명 · 3:33`) |
 | `card-summary` | 한두 줄 소개 |
@@ -110,7 +110,7 @@ grep -n '<영상ID>' index.html      # 두 줄이 나와야 합니다
 
 ```bash
 git add index.html
-git commit -m "feat: Oasis 클립 추가"
+git commit -m "feat: Never Gonna Give You Up 클립 추가"
 ```
 
 - 클립 추가는 `feat`, 깨진 링크·오타 수정은 `fix` 입니다
@@ -120,7 +120,7 @@ git commit -m "feat: Oasis 클립 추가"
 ## 5. 푸시하고 PR
 
 ```bash
-git push -u origin 'feat/#9'
+git push -u origin 'feat/#12'
 gh pr create --base main
 ```
 
@@ -135,7 +135,7 @@ gh pr create --base main
 **먼저 머지된 쪽이 우선이고, 뒤에 오는 PR 이 직접 해결합니다.**
 
 ```bash
-git switch 'feat/#9'        # main 이 아니라 내 브랜치에서
+git switch 'feat/#12'       # main 이 아니라 내 브랜치에서
 git fetch origin
 git merge origin/main       # 여기서 충돌
 # index.html 정리 후
